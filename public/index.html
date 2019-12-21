@@ -3,9 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>trip-planning</title>
+    <title>PDU</title>
+    <style>
+      html,body{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .BMap_cpyCtrl {
+         display:none;
+      }
+      .anchorBL {
+        display:none;
+      }
+    </style>
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=3.0&ak=B4Ai13hGcpI6EroRcWZI9Hiy1tWKMTmo"></script>
+    <script>
+      // 基准大小
+      const baseSize = 32
+
+      /**
+       * @desc 设置根节点的字体大小
+       */
+      function setRem() {
+        const _scale = document.documentElement.clientWidth / 980
+        document.documentElement.style.fontSize = baseSize * Math.min(_scale, 2) + 'px'
+      }
+
+      setRem()
+
+      // 视口尺寸改变时，重新计算根字体大小
+      window.onresize = function() {
+        setRem()
+      }
+    </script>
   </head>
   <body>
     <noscript>

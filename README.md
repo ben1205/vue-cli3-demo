@@ -1,9 +1,9 @@
 # PDU
 ===
-### 智能车辆出行规划
+### vue demo，技术栈 vue + vant + vux + axios + echarts + baidu-map
 
 ```
-  # 2019/12/8 首次更新新增充电桩事件与出行规划事件
+  # 2019/12/8 首次上传
 ```
 
 ## Project setup
